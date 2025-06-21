@@ -15,5 +15,5 @@ const entrySchema = new mongoose.Schema({
     }
 });
 
-const entry = mongoose.model("Store", storeSchema);
+const entry = mongoose.model("Store", entrySchema);
 export default entry;

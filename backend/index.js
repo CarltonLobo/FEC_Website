@@ -2,7 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
-import mailRoutes from "./mails/route.js";
+import entryRoutes from "./entry/route.js";
 
 dotenv.config();
 const app = express();
@@ -20,7 +20,7 @@ mongoose
     console.error("MongoDB connection error:", err);
   });
 
-app.use("/api/mail", mailRoutes);
+app.use("/api/entry", entryRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
